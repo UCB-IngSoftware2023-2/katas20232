@@ -11,4 +11,11 @@ describe("Bowling Game Test", () => {
     }
     expect(g.score()).toEqual(0);
   });
+
+  it("deberia devolver 20 porque el jugador derribo un pin en los 10 turnos", () => {
+    for(let i=0; i < 20; i ++){
+      g.roll(1);
+    }
+    expect(g.score()).toEqual(20);
+  });
 });
